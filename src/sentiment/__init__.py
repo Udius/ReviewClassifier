@@ -2,8 +2,8 @@
 
 Модули пакета будут добавляться по этапам ТЗ:
 - utils          — общие утилиты (логирование, вывод);
-- eda            — разведочный анализ данных;
-- data           — загрузка, сплиты, Dataset/DataLoader;
+- dataset        — схема данных, метки классов, загрузчик и валидатор;
+- eda            — разведочный анализ данных (statistics, noise, cli);
 - preprocessing  — чистка и токенизация текста;
 - metrics        — расчёт precision/recall/F1;
 - baseline       — baseline-модель на EmbeddingBag и её цикл обучения;
