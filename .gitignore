@@ -1,0 +1,31 @@
+# Данные (датасет не коммитим)
+*.csv
+*temp*
+
+# Виртуальное окружение
+.venv/
+venv/
+
+# Артефакты Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Веса и артефакты моделей
+models/*
+!models/.gitkeep
+
+# Сгенерированные отчёты и графики
+reports/eda/
+reports/figures/
+reports/metrics.json
+
+# Локальные настройки IDE / ОС
+.idea/
+.vscode/
+Thumbs.db
+.DS_Store
+
+# Черновик технического задания (ведётся локально)
+tz.md
