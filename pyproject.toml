@@ -1,0 +1,32 @@
+# Конфигурация пакета для установки в editable-режиме (pip install -e .).
+# Зависимости объявлены в requirements.txt, здесь только метаданные и путь к пакету.
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sentiment"
+version = "09.26.01"
+description = "Учебный проект: классификация отзывов на 3 класса тональности (baseline + RuBERT-tiny2)"
+readme = "README.md"
+requires-python = ">=3.10"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+src = ["src"]
+
+[tool.ruff.lint]
+# Стилистические правила отключены намеренно: читаемость важнее идеального стиля.
+# Оставлены только правила, ловящие реальные ошибки:
+# E9 — синтаксические ошибки, F — pyflakes (неопределённые/неиспользуемые имена),
+# B — типичные баги (изменяемое значение по умолчанию, проглоченные исключения),
+# C4 — лишние comprehensions, SIM — избыточные конструкции.
+select = ["E9", "F", "B", "C4", "SIM"]
+
+[tool.ruff.lint.per-file-ignores]
+# В __init__.py реэкспорт публичных имён — норма.
+"__init__.py" = ["F401"]
